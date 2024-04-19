@@ -65,3 +65,15 @@ o Loading f6c5717c-3866-45d3-b4e7-20b332e359e0 from .wrangler/state/v3/d1
 │ 0000_initial.sql │ (tick) │
 └──────────────────┴────────┘
 ```
+
+# APPLICATIONS
+Dùng cho rất nhiều ngữ cảnh:
+1. Fullstack Sveltkit apps (mini to big) 
+2. Short URL (QR link, marketing)
+3. Mini POS, CRM, HRM
+4. Games 
+5. Documents DMS 
+6. Learning LMS
+7. AI toolkits 
+8. Platform apps with Neon Postgres/TiDB MySQL
+
