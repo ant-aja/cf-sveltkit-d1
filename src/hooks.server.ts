@@ -7,11 +7,11 @@ import type { Handle } from '@sveltejs/kit';
 
 let platform: App.Platform;
 
-// if (dev) {
-// 	const { getPlatformProxy } = await import('wrangler');
-// 	platform = await getPlatformProxy();
-// 	console.log('Platform initialised for local development', platform);
-// }
+if (dev) {
+	const { getPlatformProxy } = await import('wrangler');
+	platform = await getPlatformProxy();
+	console.log('Platform initialised for local development', platform);
+}
 
 export const handle = (async ({ event, resolve }) => {
 	if (dev && platform) {
@@ -23,3 +23,5 @@ export const handle = (async ({ event, resolve }) => {
 
 	return resolve(event);
 }) satisfies Handle;
+
+
