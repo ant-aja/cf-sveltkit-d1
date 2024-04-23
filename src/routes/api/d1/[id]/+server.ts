@@ -19,7 +19,7 @@ export const PUT: RequestHandler = async ({params, platform}) => {
 	if (params.id == null) error(400, 'Missing id');
 	const DB: D1Database = platform?.env.DB;
 	const result = await DB.prepare('INSERT INTO users (id, email) VALUES(?, ?)')
-		.bind(1, 'test@example.com').run();
+		.bind(Math.floor(Math.random() * 100), 'test@example.com').run();
 	console.dir(result);
 	return new Response(null, {status: 204});
 };
